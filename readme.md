@@ -26,13 +26,19 @@ to generate autoload we have to dump autoload file by `composer dump-autoload` c
 
 ~~~php
 use Illuminate\Database\Capsule\Manager as Capsule;
-Capsule::schema()->dropIfExists('teachers');
 Capsule::schema()->create('teachers', function ($table) {
     $table->increments('id');
     $table->string('name');
     $table->string('email');
     $table->timestamps();
 });
+~~~
+
+### drop a table using illuminate package    
+~~~php
+Capsule::schema()->drop('teachers');
+or
+Capsule::schema()->dropIfExists('teachers');
 ~~~
 
 ### About model     
@@ -45,7 +51,7 @@ by convension model name is singular form of table name. available properties in
 or     
 
 * `$fillable`     
-* `$hidded`
+* `$hidden`
 
 Model must be child of eloquent model class. Our Teacher model     
 
@@ -75,7 +81,7 @@ eg:
 Teacher::insert([
   'name' => $faker->name,
   'email' => $faker->email,
-  'created_at' => Carbon::now()->format('Y-m-d, H-i-s')
+  'created_at' => Carbon::now()->format('Y-m-d H:i:s')
 ]);
 ~~~
 
