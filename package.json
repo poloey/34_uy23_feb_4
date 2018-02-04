@@ -1,0 +1,24 @@
+{
+  "name": "feni",
+  "version": "1.0.0",
+  "description": "composer is a php dependency manager. All php packages can be found in https://packagist.org/ site.",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poloey/34_uy23_feb_4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poloey/34_uy23_feb_4/issues"
+  },
+  "homepage": "https://github.com/poloey/34_uy23_feb_4#readme"
+}
